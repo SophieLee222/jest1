@@ -18,4 +18,20 @@ describe("Books names test suit", () => {
 
     expect(output).toEqual(expected); 
   });
+
+  test("Books names should not be sorted if the names are equal", () => {
+    const input = [
+      "Властелин Колец",
+      "Властелин Колец",
+    ];
+
+    const expected = [
+      "Властелин Колец",
+      "Властелин Колец",
+    ];
+
+    const output = sorting.sortByName(input);
+
+    expect(output).toEqual(expected); 
+  });
 });
